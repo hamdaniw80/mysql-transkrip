@@ -6,7 +6,7 @@ pipeline {
         git 'https://github.com/hamdaniw80/mysql-transkrip.git'
       }
     }
-    stage ("Remove Image") {
+    stage ("Deploy to kubernetes") {
       steps {
         sh "kubectl apply -f deployment.yaml"
       }
