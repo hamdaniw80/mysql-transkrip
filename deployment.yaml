@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: mysql-transkrip
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: mysql-transkrip
