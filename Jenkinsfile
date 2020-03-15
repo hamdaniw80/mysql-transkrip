@@ -6,7 +6,7 @@ pipeline {
         git 'https://github.com/hamdaniw80/mysql-transkrip.git'
       }
     }
-    stage ("Deploy to kubernetes") {
+    stage ("Deploy to k8s") {
       steps {
         sh "kubectl apply -f deployment.yaml"
       }
