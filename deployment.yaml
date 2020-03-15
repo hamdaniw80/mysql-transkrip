@@ -6,7 +6,7 @@ spec:
   ports:
   - port: 3306
     targetPort: 3306
-    nodePort: 33006
+    nodePort: 30006
   selector:
     app: mysql-transkrip
   type: NodePort
@@ -31,7 +31,7 @@ spec:
       - image: 192.168.56.101:5000/mysql:5.7.26
         name: mysql-transkrip
         env:
-          # Use secret in real usage
+          # Use secret in real usage or production
         - name: MYSQL_ROOT_PASSWORD
           value: P@ssw0rd
         - name: MYSQL_DATABASE
